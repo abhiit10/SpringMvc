@@ -1,0 +1,583 @@
+html * {
+    margin: 0;
+    /*padding: 0; SELECT NOT DISPLAYED CORRECTLY IN FIREFOX */
+}
+
+/* GENERAL */
+
+.spinner {
+    padding: 5px;
+    position: absolute;
+    right: 0;
+}
+
+body {
+    background: #fff;
+    color: #333;
+    font: 11px verdana, arial, helvetica, sans-serif;
+}
+
+a:link, a:visited, a:hover {
+    color: #666;
+    font-weight: bold;
+    text-decoration: none;
+}
+.links {
+    color: #000 !important;
+    font-weight: bold;
+    text-decoration: none;
+}
+.links a:hover {
+	text-decoration: underline:
+}
+
+h1 {
+    color: #214aa0;
+    font-weight: normal;
+    font-size: 16px;
+    margin: .8em 0 .3em 0;
+}
+
+.heading {
+    color: #63a242;
+    font-weight: bold;
+    font-size: 13px;
+    margin: .0em 0 .0em 0;
+}
+
+ul {
+    padding-left: 15px;	
+}
+
+input, select, textarea {
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+    font: 11px verdana, arial, helvetica, sans-serif;
+    margin: 2px 0;
+    padding: 2px 4px;
+}
+select {
+	padding: 2px 2px 2px 0;
+}
+
+.body {
+    float: left;
+    margin: 0 15px 10px 15px;
+}
+
+/* NAVIGATION MENU */
+
+.nav {
+    background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
+    border: 1px solid #ccc;
+    border-style: solid none solid none;	
+    margin-top: 5px;
+    padding: 7px 12px;
+}
+
+.menuButton {
+    font-size: 10px;
+    padding: 0 5px;
+}
+.menuButton a {
+    color: #333;
+    padding: 4px 6px;
+}
+.menuButton a.home {
+    background: url(../images/skin/house.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+.menuButton a.list {
+    background: url(../images/skin/database_table.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+.menuButton a.create {
+    background: url(../images/skin/database_add.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+
+/* MESSAGES AND ERRORS */
+
+.message {
+    background: #f3f8fc url(../images/skin/information.png) 8px 50% no-repeat;
+    border: 1px solid #C7E693;
+    color: #006dba;
+    margin: 10px 0 5px 0;
+    padding: 5px 5px 5px 30px
+}
+
+div.errors {
+    border: 0px solid red;
+    color: #cc0000;
+    margin: 1px 0 1px 0;
+    padding: 1px 0 1px 0;
+}
+div.errors ul {
+    list-style: none;
+    padding: 0;	
+}
+div.errors li {
+	background: url(../images/skin/exclamation.png) 8px 0% no-repeat;
+    line-height: 16px;
+    padding-left: 30px;
+}
+
+td.errors select {
+    border: 1px solid red;
+}
+td.errors input {
+    border: 1px solid red;
+}
+
+/* TABLES */
+
+table {
+    border: 1px solid #63a242;
+    width: 100%;
+    //float:left
+}
+tr {
+    border: 0;
+}
+#editDialog td {
+	padding: 0px 6px;
+}
+#createDialog td {
+	padding: 0px 6px;
+}
+td, th { 
+    font: 11px verdana, arial, helvetica, sans-serif;
+    line-height: 11px;
+    padding: 5px 6px;
+    text-align: left;
+}
+th {
+    background: #CCCCCC;
+    color: #000;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 16px;
+    padding: 2px 6px;
+}
+th a:link, th a:visited, th a:hover {
+    color: #333;
+    display: block;
+    font-size: 10px;
+    text-decoration: none;
+    width: 100%;
+}
+th.asc a, th.desc a {
+    background-position: right;
+    background-repeat: no-repeat;
+}
+th.asc a {
+    background-image: url(../images/skin/sorted_asc.gif);
+}
+th.desc a {
+    background-image: url(../images/skin/sorted_desc.gif);
+}
+
+table.inner {
+    border: 0px;
+    border-spacing:0;
+}
+
+.teamstatus_pending {
+	color: black;
+	background-color:#ccc;
+}
+.teamstatus_ready {
+	color: black;
+	background-color:#33ff00;
+}
+.teamstatus_process {
+	color: black;
+	background-color:#66ffff;
+}
+.teamstatus_done {
+	color: black;
+	background-color:#fff;
+}
+
+.odd {
+    background: #f0f0f0;
+}
+.even {
+    background: #fff;
+}
+
+/* LIST */
+
+.list table {
+    border-collapse: collapse;
+}
+.list th, .list td {
+    border-left: 0px solid #ddd;
+}
+.list th:hover, .list tr:hover {
+    background: #87CEEB;
+}
+
+/* PAGINATION */
+
+.paginateButtons {
+    background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
+    border: 1px solid #ccc;
+    border-top: 0;
+    color: #666;
+    font-size: 10px;
+    overflow: hidden;
+    padding: 10px 3px;
+}
+.paginateButtons a {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-color: #ccc #aaa #aaa #ccc;
+    color: #666;
+    margin: 0 3px;
+    padding: 2px 6px;
+}
+.paginateButtons span {
+    padding: 2px 3px;
+}
+/* for PMO*/
+.pmo_paginateButtons {
+    color: #666;
+    font-size: 10px;
+    overflow: hidden;
+    padding: 10px 3px;
+}
+.pmo_paginateButtons a {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-color: #ccc #aaa #aaa #ccc;
+    color: #666;
+    margin: 0 3px;
+    padding: 2px 6px;
+}
+.pmo_paginateButtons span {
+    padding: 2px 3px;
+}
+/* DIALOG */
+
+.dialog table {
+    padding: 5px 0;
+}
+
+.prop {
+    padding: 5px;
+}
+.prop .name {
+    text-align: left;
+    width: 15%;
+    white-space: nowrap;
+	vertical-align: middle;
+}
+.prop .value {
+    text-align: left;
+    width: 85%;
+	vertical-align: middle;
+}
+.prop .valueNW {
+    text-align: left;
+	vertical-align: middle;
+}
+
+.prop .bundle {
+    text-align: left;
+    width: 50%;
+}
+
+.prop a {
+    /* #5f9fcf */
+    color:#00E !important;
+}
+
+/* ACTION BUTTONS */
+
+.buttons {
+    background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+    padding: 0;
+    //float: left;
+}
+
+.buttons input {
+    background: #fff;
+    border: 0;
+    color: #333;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 3px;
+    overflow: visible;
+    padding: 2px 6px;
+}
+.buttons input.delete {
+    background: transparent url(../images/skin/database_delete.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
+.buttons input.show {
+    background: transparent url(../images/skin/database_table.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
+.buttons input.edit {
+    background: transparent url(../images/skin/database_edit.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
+.buttons input.create {
+    background: transparent url(../images/skin/database_add.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
+.buttons input.select {
+    background: transparent;
+}
+.buttons input.save {
+    background: transparent url(../images/skin/database_save.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
+.onhold_button {
+    background-color:#FFFF33;
+}
+
+.clear {
+	float:left;
+	clear:both;
+}
+
+.clear_filter {
+
+	font-size: 14px;
+
+	color: #B80000;
+
+	vertical-align: baseline;
+
+}
+
+.menuButton a.save {
+   background: transparent url(../images/skin/database_save.png) 5px 50% no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+
+.completed {
+	 background-color:#FFFFFF;
+}
+.pending  {
+	 background-color:#7FFF00;
+}
+.inProgress {
+	 background-color:#0000FF;
+}
+
+.spanAnchor{
+	font-weight: bold;
+	cursor: pointer
+}
+
+.ui-widget-header a {
+	color: #000000 !important;
+}
+
+span.cellWithoutBackground
+{
+    display:block;
+    background-image:none;
+    margin-right:-2px;
+    margin-left:-2px;
+    height:14px;
+    padding:4px;
+    cursor:pointer;
+}
+.pointer {
+	cursor:pointer;
+}
+.disableButton{
+	color: #A6A2A2 !important;
+}
+.capBtn{
+	margin:15px;
+}
+.depSpin{
+	text-align: center;
+}
+.Arrowcursor{
+	cursor: pointer;
+}
+.predArrow{
+	vertical-align: middle;
+}
+.cleanProcessDiv{
+	display: none;
+	height: 500px;
+	overflow-x: auto;
+}
+.headClass{
+	background: none repeat scroll 0 0 #CCCCCC;
+    color: #000000;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 16px;
+    padding: 2px 6px;
+}
+.willRemain{
+	background-color: lightgreen;
+}
+.willDelete{
+	background-color: yellow;
+}
+.assetSelect{
+	width:105px;
+}
+#viewGraphSpanId{
+	position:relative;
+	float: right !important;
+	margin: 0px !important;
+}
+.ellipsis{
+	white-space:nowrap; 
+	width:200px; 
+	overflow:hidden; 
+	text-overflow:ellipsis;
+}
+
+.fieldTable{
+	border:0px;
+	width :auto;
+	margin-left: 10px;
+}
+
+.assetFieldHeader1 {
+	margin-left: 10px;
+}
+
+.C{
+	background-color:#F9FFBA !important;
+}
+.I{
+	background-color:#D4F8D4 !important
+}
+.H{
+	background-color:#CCCCCC !important;
+}
+.stylingNote{
+	display:none;
+	position:absolute;
+	margin-left:1010px;
+	width:350px;
+}
+
+div.field_list{
+	border: 1px solid #63A242;
+	display: none;
+}
+div.field_list table {
+	border: 0px;
+}
+.assetImage{
+	cursor: pointer;
+}
+.assetFieldTable{
+	width :auto;
+	margin-left: 100px;
+}
+.pickbox { 
+	text-align:center;
+	display:block;
+	float:left;
+	width:30px;
+	cursor:pointer;
+}
+.assetTd{
+	vertical-align: top;
+}
+.crudTable{
+	margin-top: 12px;
+}
+td.buttons{
+	padding: 0px;
+	margin-top: 0px !important;
+}
+
+.ui-jqgrid-htable {
+	border-width: 0px !important;
+}
+
+.ui-jqgrid-btable {
+	border-width: 0px !important;
+}
+
+.ui-pg-selbox {
+	line-height:normal;
+	padding:0px;
+}
+
+.ui-search-input {
+	padding:1px 0px;
+}
+
+.ui-th-column div {
+	padding:0px;
+}
+
+.fluid {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 100% !important;
+	margin: 0px !important;
+	padding-top: 0px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+}
+#gridTableId tbody tr td {
+	padding:0px;
+}
+#outerBodyId {
+	padding: 0px !important;
+	margin: 0px !important;
+	width: 100% !important;
+}
+.headRow {
+	font-weight: bold !important;
+	text-decoration:underline !important;
+	background-color:#ffffff !important;
+	width:100px;
+}
+.leftCells {
+	width: 4% !important;
+	background-color:#ffffff;
+}
+.conflictApp {
+	margin-top: 20px;
+	padding-bottom: 20px;
+	border-width: 0px;
+}
+.conflictAppBody {
+	padding-right:20px !important;
+	border-width: 0px;
+}
+.inlineLink {
+	display: inline !important;
+	
+}
+.inlineLink:hover {
+	text-decoration: underline !important;
+}
+.ynselect{
+	max-width: 50px !important;
+}
+.iFrame {
+   display : none;
+   visibility : hidden;
+   height: 1px;
+}
